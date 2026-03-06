@@ -298,8 +298,7 @@
             </div>
         </section>
 
-        <!-- Galería de Trabajos -->
-        <!-- Galería de Trabajos -->
+        <!-- Sección de Trabajos (Videos + Imágenes) -->
         <section id="trabajos" class="trabajos">
             <div class="container">
                 <div class="section-header">
@@ -307,27 +306,113 @@
                     <div class="section-divider"></div>
                     <p class="section-subtitle">Conoce algunos de nuestros proyectos</p>
                 </div>
-                
-                <!-- Vista de cuadrícula con todas las imágenes -->
+
+                <!-- ===== CARRUSEL DE VIDEOS ===== -->
+                <div class="videos-section">
+                    <p class="grid-desc">Desliza para ver más videos</p>
+                    
+                    <div class="videos-carrusel-container">
+                        <div class="videos-carrusel-track" id="videosCarruselTrack">
+                            <div class="video-slide">
+                                <div class="video-container">
+                                    <video class="video-player" controls preload="metadata" poster="">
+                                        <source src="video/1.mp4" type="video/mp4">
+                                        Tu navegador no soporta el elemento de video.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="video-slide">
+                                <div class="video-container">
+                                    <video class="video-player" controls preload="metadata" poster="">
+                                        <source src="video/2.mp4" type="video/mp4">
+                                        Tu navegador no soporta el elemento de video.
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div class="video-slide">
+                                <div class="video-container">
+                                    <video class="video-player" controls preload="metadata" poster="">
+                                        <source src="video/3.mp4" type="video/mp4">
+                                        Tu navegador no soporta el elemento de video.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="video-slide">
+                                <div class="video-container">
+                                    <video class="video-player" controls preload="metadata" poster="">
+                                        <source src="video/4.mp4" type="video/mp4">
+                                        Tu navegador no soporta el elemento de video.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="video-slide">
+                                <div class="video-container">
+                                    <video class="video-player" controls preload="metadata" poster="">
+                                        <source src="video/5.mp4" type="video/mp4">
+                                        Tu navegador no soporta el elemento de video.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="video-slide">
+                                <div class="video-container">
+                                    <video class="video-player" controls preload="metadata" poster="">
+                                        <source src="video/6.mp4" type="video/mp4">
+                                        Tu navegador no soporta el elemento de video.
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div class="video-slide">
+                                <div class="video-container">
+                                    <video class="video-player" controls preload="metadata" poster="">
+                                        <source src="video/7.mp4" type="video/mp4">
+                                        Tu navegador no soporta el elemento de video.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="videos-carrusel-controls">
+                            <button class="videos-control prev" id="prevVideo">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="videos-indicators" id="videosIndicators">
+                                <span class="video-indicator active"></span>
+                                <span class="video-indicator"></span>
+                                <span class="video-indicator"></span>
+                                <span class="video-indicator"></span>
+                                <span class="video-indicator"></span>
+                                <span class="video-indicator"></span>
+                                <span class="video-indicator"></span>
+                            </div>
+                            <button class="videos-control next" id="nextVideo">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="videos-counter" id="videosCounter">
+                            <span id="currentVideo">1</span> / <span id="totalVideos">7</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="galeria-grid" id="galeriaGrid">
                     <div class="grid-header">
-                        <h3 class="grid-title">Nuestros trabajos </h3>
+                        <h3 class="grid-title">Nuestros trabajos</h3>
                         <p class="grid-desc">Toca una imagen para ver más grande</p>
                     </div>
                     
                     <div class="grid-container" id="imagenesGrid">
                         <!-- Las imágenes se cargarán dinámicamente con JavaScript -->
                     </div>
-                    
-                    <!-- Botón para cargar más imágenes -->
+
                     <div class="grid-load-more" id="loadMoreContainer">
                         <button class="btn-cargar" id="loadMoreBtn">
                             <i class="fas fa-images"></i> Cargar más imágenes
                         </button>
                     </div>
                 </div>
-                
-                <!-- Modal para ver imagen ampliada -->
+
                 <div class="modal-imagen" id="imagenModal">
                     <span class="modal-cerrar" id="cerrarModal">&times;</span>
                     <div class="modal-contenido">
@@ -339,158 +424,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-                
-                <!-- Carrusel de imágenes 
-                <div class="carrusel-container">
-                    <div class="carrusel-track" id="carruselTrack">
-                        <!-- Slide 1 
-                        <div class="carrusel-slide">
-                            <div class="slide-imagen">
-                                <div class="imagen-placeholder">
-                                    <i class="fas fa-broom"></i>
-                                    <span>Limpieza Profesional</span>
-                                </div>
-                            </div>
-                            <div class="slide-info">
-                                <h4>Limpieza de Oficinas Corporativas</h4>
-                                <p>Servicio integral de limpieza para edificio corporativo</p>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="carrusel-slide">
-                            <div class="slide-imagen">
-                                <div class="imagen-placeholder">
-                                    <i class="fas fa-leaf"></i>
-                                    <span>Jardinería Especializada</span>
-                                </div>
-                            </div>
-                            <div class="slide-info">
-                                <h4>Mantenimiento de Áreas Verdes</h4>
-                                <p>Diseño y mantenimiento de jardines residenciales</p>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="carrusel-slide">
-                            <div class="slide-imagen">
-                                <div class="imagen-placeholder">
-                                    <i class="fas fa-window-maximize"></i>
-                                    <span>Limpieza de Vidrios Altos</span>
-                                </div>
-                            </div>
-                            <div class="slide-info">
-                                <h4>Limpieza de Fachadas y Ventanales</h4>
-                                <p>Trabajo en alturas con equipo especializado</p>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="carrusel-slide">
-                            <div class="slide-imagen">
-                                <div class="imagen-placeholder">
-                                    <i class="fas fa-building"></i>
-                                    <span>Limpieza de Condominios</span>
-                                </div>
-                            </div>
-                            <div class="slide-info">
-                                <h4>Entrega de Condominios</h4>
-                                <p>Limpieza profunda para entrega de unidades</p>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="carrusel-slide">
-                            <div class="slide-imagen">
-                                <div class="imagen-placeholder">
-                                    <i class="fas fa-tree"></i>
-                                    <span>Mantenimiento de Jardines</span>
-                                </div>
-                            </div>
-                            <div class="slide-info">
-                                <h4>Servicio Semanal de Jardinería</h4>
-                                <p>Mantenimiento programado para áreas comunes</p>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="carrusel-slide">
-                            <div class="slide-imagen">
-                                <div class="imagen-placeholder">
-                                    <i class="fas fa-store-alt"></i>
-                                    <span>Limpieza Comercial</span>
-                                </div>
-                            </div>
-                            <div class="slide-info">
-                                <h4>Plazas Comerciales</h4>
-                                <p>Servicio de limpieza para centros comerciales</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                   
-                    <div class="carrusel-controls">
-                        <button class="carrusel-control prev" id="prevSlide">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <div class="carrusel-indicators" id="carruselIndicators">
-                            <span class="indicator active"></span>
-                            <span class="indicator"></span>
-                            <span class="indicator"></span>
-                            <span class="indicator"></span>
-                            <span class="indicator"></span>
-                            <span class="indicator"></span>
-                        </div>
-                        <button class="carrusel-control next" id="nextSlide">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
-                -->
-                <!-- Vista de cuadrícula alternativa 
-                <div class="grid-vista" id="gridVista">
-                    <h3 class="grid-title">Trabajos destacados</h3>
-                    <div class="grid-container">
-                        <div class="grid-item">
-                            <div class="grid-placeholder">
-                                <i class="fas fa-broom"></i>
-                            </div>
-                            <p>Limpieza de Oficinas</p>
-                        </div>
-                        <div class="grid-item">
-                            <div class="grid-placeholder">
-                                <i class="fas fa-leaf"></i>
-                            </div>
-                            <p>Jardinería Residencial</p>
-                        </div>
-                        <div class="grid-item">
-                            <div class="grid-placeholder">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                            <p>Mantenimiento</p>
-                        </div>
-                        <div class="grid-item">
-                            <div class="grid-placeholder">
-                                <i class="fas fa-window-maximize"></i>
-                            </div>
-                            <p>Vidrios Altos</p>
-                        </div>
-                        <div class="grid-item">
-                            <div class="grid-placeholder">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <p>Condominios</p>
-                        </div>
-                        <div class="grid-item">
-                            <div class="grid-placeholder">
-                                <i class="fas fa-tree"></i>
-                            </div>
-                            <p>Áreas Verdes</p>
-                        </div>
-                    </div>
-                </div>-->
             </div>
         </section>
 
@@ -540,57 +473,7 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- 
-                    <div class="contacto-form-container">
-                      <h3>Envíanos un mensaje</h3>
-                        <form class="contacto-form" id="contactForm">
-                            <div class="form-group">
-                                <input type="text" placeholder="Nombre completo" required>
-                                <i class="fas fa-user"></i>
-                            </div>
-                            
-                            <div class="form-group">
-                                <input type="email" placeholder="Correo electrónico" required>
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            
-                            <div class="form-group">
-                                <input type="tel" placeholder="Teléfono" required>
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            
-                            <div class="form-group">
-                                <select required>
-                                    <option value="" disabled selected>Servicio de interés</option>
-                                    <option value="limpieza">Limpieza Integral</option>
-                                    <option value="mantenimiento">Mantenimiento</option>
-                                    <option value="jardineria">Jardinería</option>
-                                    <option value="eventual">Servicio eventual (eventos)</option>
-                                    <option value="periodico">Servicio periódico</option>
-                                </select>
-                                <i class="fas fa-concierge-bell"></i>
-                            </div>
-                            <div class="form-group">
-                                <textarea placeholder="Mensaje o consulta" rows="4"></textarea>
-                                <i class="fas fa-comment"></i>
-                            </div>
-                            
-                            <button type="submit" class="btn-submit">
-                                <i class="fas fa-paper-plane"></i> Enviar mensaje
-                            </button>
-                        </form>
-                            
-                    </div>
-                </div>
-                
-                <div class="contacto-extra">
-                    <p class="horario"><i class="fas fa-clock"></i> Horario de atención: Lunes a Viernes - Respondemos en menos de 24 horas</p>
-                </div>
-            </div>
-        </section>
--->
-        <!-- Footer -->
-        <!-- Footer -->
+
         <footer class="footer">
             <div class="container">
                 <div class="footer-content">
